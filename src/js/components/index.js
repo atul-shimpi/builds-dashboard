@@ -1,11 +1,5 @@
-import welcomeComponent from './welcome';
-import permissionsComponent from './permissions';
-import weatherDashboardComponent from './weatherDashboard';
-import cityAndPostalCodeComponent from './cityAndPostalCode';
+import homeComponent from './home';
 
-export default angular.module('weather.components', [
-  welcomeComponent.name,
-	permissionsComponent.name,
-	weatherDashboardComponent.name,
-  cityAndPostalCodeComponent.name
+export default angular.module('builds.components', [
+  homeComponent.name
 ]);

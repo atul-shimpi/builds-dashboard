@@ -1,0 +1,27 @@
+.builds {
+  padding: 6px;
+  
+  .table { 
+    width: 100%;
+    
+    .columns {
+      font-weight: bold;  
+      color: grey;
+    }
+    
+    .table-row {   
+      border: 2px solid lightgrey;
+      cursor: pointer;  
+      background-color: white;
+    }
+    
+    .Pending { color: grey; }    
+    .Running { color: blue; }    
+    .Rejected { color: red; }    
+    .Complete { color: green; }    
+    .Accepted { color: teal; }      
+           
+    .table-row-expanded { height: 100px; }        
+  }
+}
+

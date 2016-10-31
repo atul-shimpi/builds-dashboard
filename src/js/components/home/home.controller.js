@@ -2,9 +2,7 @@ function HomeController(
   $scope,
   $state,
   $log) {
-  'ngInject';	 
-
-  alert('home');  
+  'ngInject';	  
 };
 
 export {HomeController};

@@ -1,5 +1,7 @@
 import appTitleDirective from './appTitle';
+import pageTitleDirective from './pageTitle';
 
 export default angular.module('myDirectives', [
-	appTitleDirective.name
+	appTitleDirective.name,
+  pageTitleDirective.name
 ]);

@@ -4,7 +4,7 @@ function appTitleDirective() {
     restrict: 'E',
     scope: {},
     replace: false,
-    templateUrl: './src/views/title/title.html'
+    templateUrl: './src/views/appTitle/title.html'
    };
 }
 

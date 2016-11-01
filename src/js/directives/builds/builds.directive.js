@@ -34,44 +34,73 @@ function buildsDirective() {
     controllerAs: '$ctrl',
     template: `
                 <div class="builds">
-                <table class="table">
-                  <tr class="columns">
-                    <th></th>
-                    <th>Change List/Build</th>
-                    <th>Owner</th> 
-                    <th>Time started</th>
-                    <th>State</th> 
-                    <th>Metrics</th>
-                    <th>Build</th> 
-                    <th>Unit Test</th>
-                    <th>Functional Test</th>                    
-                  </tr> 
-                  
-                  <tr class="table-row {{build.state}}"
-                    ng-repeat="build in builds"
-                    ng-click='$ctrl.buildClick(build.id)'
-                    ng-class="{'table-row-expanded': $ctrl.isBuildSelected(build.id)}"                    
-                  >             
-                    <td class="fa fa-desktop" aria-hidden="true" 
-                        ng-classx="{'{{build.state}}': true}"
+                  <div class="columns">      
+                    <span class="build-type">&nbsp;</span>                  
+                    <span class="column">Changelist/Build</span>
+                    <span class="column">Owner</span>
+                    <span class="column">Timestarted</span>
+                    <span class="column">State</span>
+                    <span class="column">Metrics</span>
+                    <span class="column">Build</span>
+                    <span class="column">Unit Test</span>
+                    <span class="column">Functional Test</span>
+                  </div>
+                   
+                  <div class="rows">
+                    <div                       
+                      class="table-row"
+                      ng-repeat="build in builds"
+                      ng-click='$ctrl.buildClick(build.id)'
+                      ng-class="{'table-row-expanded': $ctrl.isBuildSelected(build.id)}"> 
+                      
+                      <span class="build-type {{build.state}} fa fa-desktop" aria-hidden="true"                      
                         ng-if=build.isBuildItem()>
-                    </td>
-                    
-                    <td class="fa fa-fire" aria-hidden="true" 
-                        ng-classx="{'{{build.state}}': true}"
+                      </span>
+                      
+                      <span class="build-type {{build.state}} fa fa-fire" aria-hidden="true"                       
                         ng-if=build.isFirewallItem()>
-                    </td>
+                      </span>
                     
-                    <td>{{build.id}}</td>
-                    <td>{{build.owner}}</td>
-                    <td>{{build.timeStarted}}</td>
-                    <td ng-classx="{'{{build.state}}': true}">{{build.state}}</td> 
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>                     
-                  </tr>                  
-                </table>
+                        <span class="field {{build.state}}">{{build.id}}</span>  
+                        <span class="field {{build.state}}">{{build.owner}}</span>
+                        <span class="field {{build.state}}">{{build.timeStarted}}</span>  
+                        <span class="field {{build.state}}">{{build.state}}</span>   
+                        
+                        <span 
+                          class="field fa fa-circle {{build.metrics.status}}" aria-hidden="true">
+                        </span> 
+                        
+                        <span 
+                          class="field fa fa-circle {{build.env.status}}" aria-hidden="true">
+                        </span> 
+
+                        <span 
+                          class="field fa fa-circle {{build.unitTest.status}}" aria-hidden="true">
+                        </span> 
+
+                        <span 
+                          class="field fa fa-circle {{build.functionalTest.status}}" aria-hidden="true">
+                        </span>  
+                        
+                        <div 
+                          class="info-container"
+                          ng-if=$ctrl.isBuildSelected(build.id)>
+                          
+                          <div class="info-button">
+                          </div>
+                          
+                          <div class="info-button">
+                          </div>
+                          
+                          <div class="info-button">
+                          </div>
+                          
+                          <div class="info-button">
+                          </div>
+                        </div>
+                                                
+                    </div>
+                  </div>
                 </div>
               `
    };

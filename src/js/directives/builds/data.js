@@ -72,7 +72,7 @@ var builds = [];
 //============================================================
 
 // Metrics
-var metrics = new Metrics();
+var metrics = [];
 
 metrics.status = 'Pending';
 
@@ -92,13 +92,13 @@ builds.push(new Build('Build', 'Tenrox-R1_1235', '', '', 'Pending', metrics, env
 //============================================================
 
 // metrics
-var metrics = new Metrics();
+var metrics = [];
 
 metrics.status = 'Running';
-metrics.add(new Metric('Test', 64, 'up'));
-metrics.add(new Metric('Maintainability', 53, 'up'));
-metrics.add(new Metric('Security', 64, 'normal'));
-metrics.add(new Metric('Workmanship', 72, 'up'));
+metrics.push(new Metric('Test', 88, 'up'));
+metrics.push(new Metric('Maintainability', 97, 'up'));
+metrics.push(new Metric('Security', 33, 'normal'));
+metrics.push(new Metric('Workmanship', 42, 'normal'));
 
 // environments
 var env = new Environments();
@@ -117,13 +117,13 @@ builds.push(new Build('Firewall', '432462', 'jtuck', '4/18/2014 12:12pm', 'Runni
 //============================================================
 
 // metrics
-var metrics = new Metrics();
+var metrics = [];
 
 metrics.status = 'Rejected';
-metrics.add(new Metric('Test', 64, 'up'));
-metrics.add(new Metric('Maintainability', 53, 'up'));
-metrics.add(new Metric('Security', 64, 'normal'));
-metrics.add(new Metric('Workmanship', 72, 'up'));
+metrics.push(new Metric('Test', 55, 'up'));
+metrics.push(new Metric('Maintainability', 76, 'up'));
+metrics.push(new Metric('Security', 12, 'normal'));
+metrics.push(new Metric('Workmanship', 67, 'normal'));
 
 // environments
 var env = new Environments();
@@ -142,13 +142,13 @@ builds.push(new Build('Firewall', '432461', 'samy', '4/18/2014 10:53am', 'Reject
 //============================================================
 
 // metrics
-var metrics = new Metrics();
+var metrics = [];
 
 metrics.status = 'Complete';
-metrics.add(new Metric('Test', 64, 'up'));
-metrics.add(new Metric('Maintainability', 53, 'up'));
-metrics.add(new Metric('Security', 64, 'normal'));
-metrics.add(new Metric('Workmanship', 72, 'up'));
+metrics.push(new Metric('Test', 164, 'up'));
+metrics.push(new Metric('Maintainability', 32, 'up'));
+metrics.push(new Metric('Security', 23, 'normal'));
+metrics.push(new Metric('Workmanship', 172, 'normal'));
 
 // environments
 var env = new Environments();
@@ -167,13 +167,13 @@ builds.push(new Build('Build','Tenrox-R1_1234', '', '4/17/2014 9:42am', 'Complet
 //============================================================
 
 // metrics
-var metrics = new Metrics();
+var metrics = [];
 
 metrics.status = 'Rejected';
-metrics.add(new Metric('Test', 64, 'up'));
-metrics.add(new Metric('Maintainability', 53, 'up'));
-metrics.add(new Metric('Security', 64, 'normal'));
-metrics.add(new Metric('Workmanship', 72, 'up'));
+metrics.push(new Metric('Test', 164, 'up'));
+metrics.push(new Metric('Maintainability', 153, 'up'));
+metrics.push(new Metric('Security', 243, 'normal'));
+metrics.push(new Metric('Workmanship', 154, 'normal'));
 
 // environments
 var env = new Environments();
@@ -192,13 +192,13 @@ builds.push(new Build('Firewall', '432460', 'samy', '4/17/2014 7:51am', 'Rejecte
 //============================================================
 
 // Metrics
-var metrics = new Metrics();
+var metrics = [];
 
 metrics.status = 'Accepted';
-metrics.add(new Metric('Test', 64, 'up'));
-metrics.add(new Metric('Maintainability', 53, 'up'));
-metrics.add(new Metric('Security', 64, 'normal'));
-metrics.add(new Metric('Workmanship', 72, 'up'));
+metrics.push(new Metric('Test', 118, 'up'));
+metrics.push(new Metric('Maintainability', 76, 'up'));
+metrics.push(new Metric('Security', 45, 'normal'));
+metrics.push(new Metric('Workmanship', 98, 'normal'));
 
 // environments
 var env = new Environments();

@@ -87,15 +87,42 @@ function buildsDirective() {
                           ng-if=$ctrl.isBuildSelected(build.id)>
                           
                           <div class="info-button">
+                            <span class="info-title">Metrics</span>
+                            <table class="info-table">
+                              <tr>
+                                <td>
+                                  <span class="fa fa-arrow-up fa-lg"></span>
+                                  <span class="metric-info-cell">{{build.metrics[0].count}}</span>
+                                </td>
+                                <td>
+                                  <span class="fa fa-arrow-up fa-lg"></span>
+                                  <span class="metric-info-cell">{{build.metrics[1].count}}
+                                </span></td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class="fa fa-arrow-right fa-lg"></span>
+                                  <span class="metric-info-cell">{{build.metrics[2].count}}</span>
+                                </td>
+                                <td>
+                                  <span class="fa fa-arrow-right fa-lg"></span>
+                                  <span class="metric-info-cell">{{build.metrics[3].count}}</span>
+                                </td>
+                              </tr>
+                            </table>
                           </div>
                           
                           <div class="info-button">
+                            <span class="info-title">Build</span>
+                            
                           </div>
                           
                           <div class="info-button">
+                            <span class="info-title">Unit Test</span>
                           </div>
                           
                           <div class="info-button">
+                            <span class="info-title">Functional Test</span>
                           </div>
                         </div>
                                                 

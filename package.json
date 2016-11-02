@@ -1,12 +1,12 @@
 {
-  "name": "hows-the-weather",
+  "name": "builds.com",
   "version": "1.0.0",
-  "description": "Weather monitoring application",
+  "description": "Builds dashboard application",
   "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start2": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 0.0.0.0 --port 3000",
+    "startx": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 0.0.0.0 --port 3000",
     "start": "sh start.sh"
   },
   "engines": {

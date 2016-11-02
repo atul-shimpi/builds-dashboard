@@ -101,12 +101,17 @@ function buildsDirective() {
                               </tr>
                               <tr>
                                 <td>
-                                  <span class="fa fa-arrow-right fa-lg"></span>
-                                  <span class="metric-info-cell">{{build.metrics[2].count}}</span>
+                                  <span class="fa fa-arrow-right fa-lg" style="color: orange;"></span>
+                                  <span class="metric-info-cell" 
+                                        style="color: orange;">
+                                        {{build.metrics[2].count}}
+                                  </span>
                                 </td>
                                 <td>
-                                  <span class="fa fa-arrow-right fa-lg"></span>
-                                  <span class="metric-info-cell">{{build.metrics[3].count}}</span>
+                                  <span class="fa fa-arrow-right fa-lg" style="color: orange;"></span>
+                                  <span class="metric-info-cell" style="color: orange;">
+                                    {{build.metrics[3].count}}
+                                  </span>
                                 </td>
                               </tr>
                             </table>
@@ -114,7 +119,19 @@ function buildsDirective() {
                           
                           <div class="info-button">
                             <span class="info-title">Build</span>
-                            
+                            <table class="info-table">
+                              <tr>
+                                <td><span class="fa fa-laptop fa-3x"></td>
+                                <td><span class="fa fa-laptop fa-3x"></td>                                
+                              <tr>
+                              <tr>
+                                <td><span>Debug</td>
+                                <td><span>Release</td>                                
+                              <tr>
+                              <tr>
+                                <td colspan="2" class="date">{{build.env.timeStamp}}</td>
+                              <tr>
+                            </table>
                           </div>
                           
                           <div class="info-button">

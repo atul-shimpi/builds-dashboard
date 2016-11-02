@@ -45,7 +45,11 @@
       font-size: 14px;
     }
     
-    .table-row-expanded { height: 180px; visibility: block; };
+    .table-row-expanded { 
+      height: 180px;
+      visibility: block;
+      background-color: RGB(230, 240, 230);
+    };
     
     .Pending { color: grey; }    
     .Running { color: blue; }    
